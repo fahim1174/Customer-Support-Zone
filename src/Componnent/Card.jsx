@@ -1,4 +1,4 @@
-const Card = ({Totaltask}) => {
+const Card = ({Totaltask,Totalresolved}) => {
   return (
     <div className="w-11/12 mx-auto flex-col-1 lg:flex  justify-between item-center py-10">
       <div
@@ -24,7 +24,7 @@ const Card = ({Totaltask}) => {
           `,
         }}>
             <h1 className="text-2xl font-semibold">Resolved</h1>
-            <p className="text-4xl font-bold">0</p>
+            <p className="text-4xl font-bold">{Totalresolved}</p>
         </div>
     </div>
   );
