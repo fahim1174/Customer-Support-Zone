@@ -13,8 +13,12 @@ const [data, setdata] = useState(Alldata)
   const Handelclick = (item) => {
     //  toast Cheak
     const cheak = task.find((data) => data.id == item.id);
-    cheak ? toast("Repeat Progress !") : toast("Progress In!");
-
+    if (cheak) {
+    toast("Repeat Progress !");
+    return; 
+  }
+  toast("Progress In!");
+  
     // task statuse e data patabo
     const Newtask = [...task, item];
     settask(Newtask);
